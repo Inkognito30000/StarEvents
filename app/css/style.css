@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn {
   font-weight: 800;
   font-size: 1.7rem;
@@ -237,3 +238,29 @@ ul {
   z-index: -1;
   opacity: 0;
 }
+
+.custom-radio + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio + label::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+label {
+  font-size: 20rem;
+}/*# sourceMappingURL=style.css.map */
