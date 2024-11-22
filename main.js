@@ -1,25 +1,11 @@
 "use strict";
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  slidesPerView: 3,
+const card = Array.from(document.querySelectorAll('.size-wrapper__card'));
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-const buttons = Array.from(document.querySelectorAll('.box-wrapper'));
-const contents = document.querySelectorAll('.box-content');
-
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    button.nextElementSibling.classList.toggle('hidden')
-    button.lastElementChild.classList.toggle('active'); 
-  })
+card.forEach((item) => {
+    item.addEventListener('click', () => {
+        item.childNodes[0].classList.add('active')
+    })
 })
 
+/* console.log(card[2].childNodes[0].textContent); */
