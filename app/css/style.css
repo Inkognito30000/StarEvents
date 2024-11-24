@@ -265,3 +265,35 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.2rem;
+  border: 2px solid #e1e1e2;
+  border-radius: 0.8rem;
+  height: 4.7rem;
+  cursor: pointer;
+}
+.label .input {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.input:checked + .span {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 8rem;
+  background: #161616;
+  right: -1rem;
+  top: -1.5rem;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}/*# sourceMappingURL=style.css.map */
